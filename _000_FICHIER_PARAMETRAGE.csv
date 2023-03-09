@@ -1,0 +1,25 @@
+NOM_VARIABLE;VALEUR_VARIABLE;COMMENTAIRE
+_1_xxxxxxxxxxxx_;##[DEBUT Definition Variables PROJET]######################################################################################################################################;
+env;DEV;DEV, QUAL ou PROD pour environnement de développement, qualification ou production
+nbObs2build;ALL;nombre de lignes à récupérer pour construire les tables en environnemen de dev, si intégralité, mettre ALL, 0 ou rien à la place
+version_projet;DTM V.1;version du projet, permet de labelliser l'ensemble des programmes SAS
+version_z_leading;7;comme pour SAS, Z5 par exemple pour avoir sur 5 zéro, sinon mettre 5 pour ne pas avoir de 0 devant (longueur maximale : 7!)
+scope_errors;ALL;ALL, SAS ou APP, permet d'indiquer la marge acceptable des erreurs pour le déploiement d'un environnement à un autre - ALL indique que l'on accepte aucune erreur, quelque soit sa source
+scope_warnings;ALL;ALL, SAS ou APP, permet d'indiquer la marge acceptable des alertes pour le déploiement d'un environnement à un autre - ALL indique que l'on accepte aucune alerte, quelque soit sa source
+mdp_tables;{SAS003}40E1BDE386CC08DC0140F07D3CF59E71D34E;MERCI DE NE PAS MODIFIER - Mot de passe des tables techniques SAS (K4_B)
+path_root;&sasLibRoot.;chemin racine des fichiers LOGS SAS
+path_param;&sasLibRoot.\_PARAM_PROJET_;chemin racine des fichiers de paramétrage SAS
+path_libraries;&sasLibRoot.\Librairie_SAS;chemin des fichiers LIBRAIRIES SAS
+path_fw_root;&sasLibRoot.\Programmes_SAS;chemin racine des projets/programmes autonomes ou du FRAMEWORK SAS
+path_app_root;&sasLibRoot.\_%getEnv()_;chemin racine des projets/programmes SAS par environnement
+path_app_commons;&sasLibRoot.\_%getEnv()_\prg_SAS_communs;chemin des programmes SAS communs
+path_log_fw;&sasLibRoot.\_LOG_SAS;chemin des fichiers LOGS SAS pour les macros gérant le projet
+path_log_app;&sasLibRoot.\_%getEnv()_\_LOG_SAS;chemin des fichiers LOGS SAS
+path_formats;&sasLibRoot.\Formats_SAS;chemin des fichiers LOGS SAS
+path_tech_tables;&sasLibRoot.\Tables_Techniques_SAS;chemin des tables techniques SAS
+tech_sig_lib;zLibSig;librairie logique tables techniques SAS
+tech_sig_tab;SIGNATURE_PROGRAMMES;nom de la table techniques contenant les signatures, version et états des programmes SAS
+_1_xxxxxxxxxxxx_;##[FIN Definition Variables PROJET]########################################################################################################################################;
+_2_xxxxxxxxxxxx_;##[DEBUT Definition Variables Application]#################################################################################################################################;
+macro_variable_perso;hello;Définir dans ce bloc les macros perso si besoin...
+_2_xxxxxxxxxxxx_;##[FIN Definition Variables Application]###################################################################################################################################;

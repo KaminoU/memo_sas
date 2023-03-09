@@ -1,0 +1,1 @@
+%put2Log(" [Environnement : %getEnv()]::HELLO... ", typeLog = NOTE);
